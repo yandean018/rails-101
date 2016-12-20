@@ -43,7 +43,7 @@ class GroupsController < ApplicationController
     end
   end
 
-   
+
 
   def destroy
 
@@ -60,7 +60,9 @@ class GroupsController < ApplicationController
       redirect_to root_path, alert: "You have no permission."
     end
   end
+
   def group_params
     params.require(:group).permit(:title, :description)
  end
+ 
 end
